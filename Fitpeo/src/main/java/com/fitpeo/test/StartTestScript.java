@@ -134,8 +134,7 @@ public class StartTestScript{
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}else {
 				String screenshot = captureScreenshot(driver, "adjustSliderTargetValue");
-				test.fail(
-						"Slider adjustment failed. Final value: "+ targetvalue + " on the Revenue Calculator page.",
+				test.fail("Slider adjustment failed. Final value: "+ targetvalue + " on the Revenue Calculator page.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}			
 		} catch (Exception e) {
@@ -150,20 +149,15 @@ public class StartTestScript{
 			RevenueCalculatorPage.enterValueTextFiled(driver, test, targetvalue);	
 			if(RevenueCalculatorPage.sliderButtonValue(driver) == targetvalue) {
 				String screenshot = captureScreenshot(driver, "updateTheTextField");
-				test.pass(
-						"Text field updated to "+targetvalue+" and the slider adjusted accordingly.",
+				test.pass("Text field updated to "+targetvalue+" and the slider adjusted accordingly.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}else {
-				System.out.println("the value "+RevenueCalculatorPage.getTextBoxValue(driver) + " "+ targetvalue
-						+" "+ RevenueCalculatorPage.sliderButtonValue(driver)+" "+targetvalue);
 				String screenshot = captureScreenshot(driver, "updateTheTextField");
-				test.fail(
-						": Text field updated to "+targetvalue+" but the slider did not adjust correctly.",
+				test.fail(": Text field updated to "+targetvalue+" but the slider did not adjust correctly.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}
 
 		}catch (Exception e) {
-			e.printStackTrace();
 			String screenshot = captureScreenshot(driver, "updateTheTextField");
 			test.fail("Unable to update text field or adjust the slider due to  Exception: "
 					+ e.getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
@@ -174,19 +168,16 @@ public class StartTestScript{
 			int currentvalue= RevenueCalculatorPage.sliderButtonValue(driver);
 			if(currentvalue == updateValue) {
 				String screenshot = captureScreenshot(driver, "validateSliderValue");
-				test.pass(
-						" The slider successfully updated its position to reflect the value "+updateValue+" entered in the text field.",
+				test.pass("The slider successfully updated its position to reflect the value "+updateValue+" entered in the text field.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}else {
 				String screenshot = captureScreenshot(driver, "validateSliderValue");
-				test.fail(
-						"The slider failed to update its position for the entered value "+updateValue+" entered in the text field.",
+				test.fail("The slider failed to update its position for the entered value "+updateValue+" entered in the text field.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}
 		}catch(Exception e) {
 			String screenshot = captureScreenshot(driver, "validateSliderValue");
-			test.fail(
-					" An error occurred while validating the slider update functionality errorMessage:"+e.getMessage(),
+			test.fail(" An error occurred while validating the slider update functionality errorMessage:"+e.getMessage(),
 					MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
 		}
@@ -200,19 +191,16 @@ public class StartTestScript{
 					RevenueCalculatorPage.selectCPT99474CheckBox(driver, test)) {
 
 				String screenshot = captureScreenshot(driver, "selectCPTCodes");
-				test.pass(
-						"All required CPT codes are selected as expected.",
+				test.pass("All required CPT codes are selected as expected.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}else {
 				String screenshot = captureScreenshot(driver, "selectCPTCodes");
-				test.fail(
-						"All required CPT codes are not selected as expected.",
+				test.fail("All required CPT codes are not selected as expected.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 			}
 		}catch(Exception e) {
 			String screenshot = captureScreenshot(driver, "selectCPTCodes	");
-			test.fail(
-					" An error occurred while selecting required CPT codes are not selected as expected. errorMessage:"+e.getMessage(),
+			test.fail(" An error occurred while selecting required CPT codes are not selected as expected. errorMessage:"+e.getMessage(),
 					MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
 		}
@@ -222,24 +210,19 @@ public class StartTestScript{
 			String currentTotalRecurringReimbursementPrice = RevenueCalculatorPage.getTotalRecurringReimbursementPriceValue(driver,test);
 			if(expectedTotalRecurringReimbursementPrice.equals(currentTotalRecurringReimbursementPrice)){
 				String screenshot = captureScreenshot(driver, "validateTotalRecurringReimbursement");
-				test.pass(
-						"The header displays the correct value: " + currentTotalRecurringReimbursementPrice + 
-						" as Expected Value: " + expectedTotalRecurringReimbursementPrice + ".",
+				test.pass("The header displays the correct value: " + currentTotalRecurringReimbursementPrice + " as Expected Value: " + expectedTotalRecurringReimbursementPrice + ".",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
 			}
 			else {
 				String screenshot = captureScreenshot(driver, "validateTotalRecurringReimbursement");
-				test.fail(
-						"The header displays an incorrect value: " + currentTotalRecurringReimbursementPrice + 
-						". Expected Value: " + expectedTotalRecurringReimbursementPrice + ".",
+				test.fail("The header displays an incorrect value: " + currentTotalRecurringReimbursementPrice + ". Expected Value: " + expectedTotalRecurringReimbursementPrice + ".",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
 			}
 		}catch(Exception e){
 			String screenshot = captureScreenshot(driver, "validateTotalRecurringReimbursement");
-			test.fail(
-					"An error occurred during validation. Exception: " + e.getMessage() + ".",
+			test.fail("An error occurred during validation. Exception: " + e.getMessage() + ".",
 					MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
 
 		}
