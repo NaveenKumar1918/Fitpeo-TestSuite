@@ -38,15 +38,28 @@ Running the Tests
 Clone the Repository: Clone the FitPeo Automation Script repository to your local machine.
 
 bash
-Copy code
+Copy code:
 git clone https://github.com/NaveenKumar1918/Fitpeo-TestSuite.
 
-1.Navigate to the Project Directory: Open the project in Eclipse or your preferred IDE.
-2.Ensure Dependencies Are Loaded: If you’re using Eclipse, Maven should automatically download all the necessary dependencies from the pom.xml. If not, right-click the project and select Maven > Update Project.
-3.Verify WebDriver Location: The chromedriver file for Chrome version 131 is already included in the chromedriver folder. Make sure the path to this folder is correctly set in your tests if needed.
-4.Run the Tests: The tests are configured in the fitpeo_test.xml TestNG suite file. To run the tests, follow these steps:
-5.Right-click on fitpeo_test.xml.
-6.Select Run As > TestNG Suite
+ How to Run the Tests
+1. Navigate to the Project Directory
+Open your project in Eclipse or your preferred IDE. Make sure you have the project set up correctly in your workspace.
+2. Ensure Dependencies Are Loaded
+If you're using Eclipse, Maven should automatically download the necessary dependencies from your pom.xml file.
+To verify, right-click the project in the Project Explorer and select Maven > Update Project. This will ensure all dependencies are downloaded and up-to-date.
+3. Verify WebDriver Location
+Ensure that the chromedriver for Chrome version 131 is included in the chromedriver folder within your project.
+Verify that the path to this chromedriver is correctly referenced in your test scripts. If you're using Selenium, the System.setProperty("webdriver.chrome.driver", "path/to/chromedriver"); should point to the correct location.
+4. Run the Tests
+To run the FitPeo test automation script, follow these steps:
 
-Locate the Report Folder:
-After running your tests, the Extent Reports folder should be generated within the project directory. This folder contains the test results in an HTML format.
+Locate the TestNG Suite File: Ensure that the fitpeo_test.xml TestNG suite file is in your project structure.
+
+Right-click on the fitpeo_test.xml file in the Project Explorer.
+Run As > TestNG Suite
+This will trigger TestNG to execute all the test cases defined within the fitpeo_test.xml suite file.
+
+5. Viewing the Report
+Once the tests are executed, an Extent Report will be generated in the extent-reports/ folder within your project directory.
+You can open the report.html file in any browser to view the detailed results of the test run, including pass/fail statuses, duration, and screenshots of the tests.
+
