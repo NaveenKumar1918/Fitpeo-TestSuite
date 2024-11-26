@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-26T12:52:59 IST" name="Suite" finished-at="2024-11-26T13:00:37 IST" duration-ms="457589">
+    <groups>
+    </groups>
+    <test started-at="2024-11-26T12:52:59 IST" name="Test" finished-at="2024-11-26T13:00:37 IST" duration-ms="457589">
+      <class name="com.fitpeo.test.StartTestScript">
+        <test-method signature="runTest()[pri:0, instance:com.fitpeo.test.StartTestScript@10683d9d]" started-at="2024-11-26T12:52:59 IST" name="runTest" finished-at="2024-11-26T13:00:37 IST" duration-ms="457538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest -->
+      </class> <!-- com.fitpeo.test.StartTestScript -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
