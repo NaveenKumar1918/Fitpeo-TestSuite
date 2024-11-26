@@ -1,10 +1,12 @@
 FitPeo Automation Script
 
 Overview:
+
 The FitPeo Automation Script is a test automation project that validates the functionality of the FitPeo website. The script covers various use cases, including navigation and interaction with the Revenue Calculator page. The script uses Selenium WebDriver for browser automation and TestNG for running the tests.
 This project includes detailed test reports generated using Extent Reports, and it captures screenshots for each test run, including passed, failed, and error scenarios.
 
 Features:
+
 1.Automates testing for the FitPeo website.
 2.Validates key functionality, including the Revenue Calculator page.
 3.Generates Extent Reports with test results and screenshots.
