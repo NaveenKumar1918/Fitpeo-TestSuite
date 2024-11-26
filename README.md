@@ -41,12 +41,12 @@ bash
 Copy code
 git clone https://github.com/NaveenKumar1918/Fitpeo-TestSuite.
 
-Navigate to the Project Directory: Open the project in Eclipse or your preferred IDE.
-Ensure Dependencies Are Loaded: If you’re using Eclipse, Maven should automatically download all the necessary dependencies from the pom.xml. If not, right-click the project and select Maven > Update Project.
-Verify WebDriver Location: The chromedriver file for Chrome version 131 is already included in the chromedriver folder. Make sure the path to this folder is correctly set in your tests if needed.
-Run the Tests: The tests are configured in the fitpeo_test.xml TestNG suite file. To run the tests, follow these steps:
-Right-click on fitpeo_test.xml.
-Select Run As > TestNG Suite
+1.Navigate to the Project Directory: Open the project in Eclipse or your preferred IDE.
+2.Ensure Dependencies Are Loaded: If you’re using Eclipse, Maven should automatically download all the necessary dependencies from the pom.xml. If not, right-click the project and select Maven > Update Project.
+3.Verify WebDriver Location: The chromedriver file for Chrome version 131 is already included in the chromedriver folder. Make sure the path to this folder is correctly set in your tests if needed.
+4.Run the Tests: The tests are configured in the fitpeo_test.xml TestNG suite file. To run the tests, follow these steps:
+5.Right-click on fitpeo_test.xml.
+6.Select Run As > TestNG Suite
 
 Locate the Report Folder:
 After running your tests, the Extent Reports folder should be generated within the project directory. This folder contains the test results in an HTML format.
