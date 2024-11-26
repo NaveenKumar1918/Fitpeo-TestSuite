@@ -22,7 +22,7 @@ public class StartTestScript{
 	private final int updateValue1=820;
 	private final int updateValue2=560;
 	private final String homePageUrl ="https://www.fitpeo.com/";
-	private final String reveniumCalculatorPageUrl = "https://www.fitpeo.com/revenue-calculator";
+	private final String revenueCalculatorPageUrl = "https://www.fitpeo.com/revenue-calculator";
 	private final String expectedTotalRecurringReimbursementPrice="$110700";
 	
 	@Test
@@ -94,7 +94,7 @@ public class StartTestScript{
 	public void navigateToRevenueCalculator() {
 		try {
 			HomePage.clickNavBarRevenueCalculator(driver, test);
-			if(driver.getCurrentUrl().equals(reveniumCalculatorPageUrl)) {
+			if(driver.getCurrentUrl().equals(revenueCalculatorPageUrl)) {
 				String screenshot = captureScreenshot(driver, "navigateToRevenueCalculator");
 				test.pass("Successfully navigated to the Revenue Calculator page.",
 						MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
