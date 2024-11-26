@@ -37,7 +37,8 @@ Clone the Repository: Clone the FitPeo Automation Script repository to your loca
 
 bash
 Copy code
-git clone https://github.com/NaveenKumar1918/Fitpeo-TestSuite
+git clone https://github.com/NaveenKumar1918/Fitpeo-TestSuite.
+
 Navigate to the Project Directory: Open the project in Eclipse or your preferred IDE.
 Ensure Dependencies Are Loaded: If you’re using Eclipse, Maven should automatically download all the necessary dependencies from the pom.xml. If not, right-click the project and select Maven > Update Project.
 Verify WebDriver Location: The chromedriver file for Chrome version 131 is already included in the chromedriver folder. Make sure the path to this folder is correctly set in your tests if needed.
